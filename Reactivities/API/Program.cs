@@ -26,4 +26,19 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+/* Added scope */
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+
+try
+{
+    var context = services.GetRequiredService<DataContext>();
+    context.Database.Migrate();
+}
+catch (Exception exception)
+{
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    logger.LogError(exception, "An error occurred during migration");
+}
+
 app.Run();
