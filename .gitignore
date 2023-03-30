@@ -2,6 +2,7 @@
 Other
 .vscode
 *.db
+appsettings.json
 
 # User-specific files
 *.rsuser
