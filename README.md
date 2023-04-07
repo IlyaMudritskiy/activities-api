@@ -7,12 +7,20 @@ Application for managing plans and activities built as a part of an online cours
   - MediatR
   - AutoMapper
   - MVC architecture
+
 - **Frontend**: 
   - Typescript
   - React
   - Axios
   - MobX
   - Semantic UI
+  - React router
+
+Webpage is at:
+`http://localhost:3000/`
+
+Swagger is at:
+`http://localhost:5000/swagger`
 
 # How to run
 
