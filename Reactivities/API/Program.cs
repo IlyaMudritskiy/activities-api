@@ -1,4 +1,5 @@
 using API.Extensions;
+using API.Middleware;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -10,17 +11,16 @@ builder.Services.AddApplicationServices(builder.Configuration);
 var app = builder.Build();
 
 //==============================================================================
-//=                      Configure HTTP request pipeline                       =
+//=                                 Middleware                                 =
 //==============================================================================
+app.UseMiddleware<ExceptionMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-//==============================================================================
-//=                                  App Use                                   =
-//==============================================================================
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseAuthorization();
