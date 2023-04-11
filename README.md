@@ -16,6 +16,7 @@ Application for managing plans and activities built as a part of an online cours
   - `Semantic UI` - for styling
   - `React router` - for routing to different pages
   - `Toastify` - for notifications and alerts
+  - `Formik` - for form handling
 
 Webpage is at:
 `http://localhost:3000/`
