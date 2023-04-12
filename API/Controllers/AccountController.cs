@@ -28,7 +28,8 @@ namespace API.Controllers
 
             if (result)
             {
-                return new UserDTO {
+                return new UserDTO
+                {
                     DisplayName = user.DisplayName,
                     Image = null,
                     Token = _tokenService.CreateToken(user),
