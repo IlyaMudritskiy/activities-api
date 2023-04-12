@@ -1,4 +1,5 @@
 using API.DTO;
+using API.Services;
 using Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +10,11 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class AccountController : ControllerBase
     {
-        public UserManager<AppUser> _userManager { get; set; }
-        public AccountController(UserManager<AppUser> userManager)
+        public UserManager<AppUser> _userManager;
+        private readonly TokenService _tokenService;
+        public AccountController(UserManager<AppUser> userManager, TokenService tokenService)
         {
+            _tokenService = tokenService;
             _userManager = userManager;
         }
 
@@ -28,7 +31,7 @@ namespace API.Controllers
                 return new UserDTO {
                     DisplayName = user.DisplayName,
                     Image = null,
-                    Token = "Token",
+                    Token = _tokenService.CreateToken(user),
                     Username = user.UserName
                 };
             }
