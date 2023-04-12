@@ -10,8 +10,8 @@ export default function HomePage() {
                     Activities manager
                 </Header>
                 <Header as='h2' inverted content='Welcome to Activities Manager' />
-                <Button as={Link} to='/activities' size='huge' inverted>
-                    Go to Activities
+                <Button as={Link} to='/login' size='huge' inverted>
+                    Log in
                 </Button>
             </Container>
         </Segment>
