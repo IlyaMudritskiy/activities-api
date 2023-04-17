@@ -7,6 +7,8 @@ Application for managing plans and activities built as a part of an online cours
   - `MediatR`
   - `AutoMapper`
   - `MVC architecture`
+  - `Cloudinary` - for storing user images
+  - `SQLite` - for storing user data
 
 - **Frontend**: 
   - `Typescript` - for static typing and safety
