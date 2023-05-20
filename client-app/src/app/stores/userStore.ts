@@ -37,7 +37,13 @@ export default class UserStore {
         } catch (error) {
             throw error;
         }
-    } 
+    }
+
+    setImage = (image: string) => {
+        if (this.user) {
+            this.user.image = image;
+        }
+    }
 
     logout = () => {
         store.commonStore.setToken(null);
