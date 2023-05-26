@@ -19,6 +19,8 @@ Application for managing plans and activities built as a part of an online cours
   - `React router` - for routing to different pages
   - `Toastify` - for notifications and alerts
   - `Formik` - for form handling
+  - `React cropper` - for cropping images
+  - `React dropzone` - for drag and drop file uploads
 
 Webpage is at:
 `http://localhost:3000/`
